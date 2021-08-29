@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>random-user</title>
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-gray-700">
+    <div class="loader">
+      <img src="loading.gif" alt="Loading..." />
+    </div>
+    <section>
+      <h1 class="text-4xl font-bold text-center mt-12 text-white">
+        RANDOM USER GENERATOR
+      </h1>
+      <div id="display-user" class="mt-12 display"></div>
+      <!--  <div id="details" class="buttons mt-2">
+        <button class="p-2 m-2 bg-white rounded">Street</button>
+        <button class="p-2 m-2 bg-white rounded">City</button>
+        <button class="p-2 m-2 bg-white rounded">Coordinates</button>
+        <button class="p-2 m-2 bg-white rounded">Timezone</button>
+      </div> -->
+      <div class="buttons mt-12">
+        <button class="p-2 bg-white rounded" onclick="loadUser()">
+          Load User
+        </button>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
