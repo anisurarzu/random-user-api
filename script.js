@@ -1,7 +1,14 @@
-const loadUser = () => {
-  fetch("https://randomuser.me/api/?results=50")
-    .then((res) => res.json())
-    .then((data) => displayUser(data.results[0]));
+const loadUser = async () => {
+  const url = "https://randomuser.me/api/?results=50";
+  try {
+    const res = await fetch(url);
+    const data = await res.json();
+    displayUser(data.results[0]);
+  } catch (error) {
+    console.log("something wrong here");
+  }
+  // .then((res) => res.json())
+  // .then((data) => displayUser(data.results[0]));
 };
 
 const displayUser = (user) => {
